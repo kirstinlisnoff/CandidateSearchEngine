@@ -41,6 +41,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin-top: 100px;
 }
 
 button {
@@ -94,20 +95,35 @@ tbody tr:nth-child(odd) {
   background-color: #333333;
 }
 
+.avatar {
+  padding: 0.5em;
+}
+
 .nav {
-  display: flex;
-  justify-content: flex-start;
+  position: fixed;       /* Keep it locked in top-left */
+  top: 0;
+  left: 0;
   padding: 1em 2em;
+  z-index: 1000; 
 }
 
 .nav-item {
-  padding: 0 0.5rem;
-  list-style: none;
+  display: flex;         /* Make list items sit side-by-side */
+  gap: 2rem;             /* Spacing between links */
+  list-style: none;      /* Remove bullet points */
+  margin: 0;
+  padding: 5px;
+  z-index: 1000;
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .active {
@@ -117,4 +133,59 @@ tbody tr:nth-child(odd) {
 .table {
   width: 80vw;
   table-layout: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.table th, .table td {
+  padding: 8px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.table-body {
+  gap: 1rem;
+}
+
+
+.card {
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 0px;
+  text-align: left;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0.5em;
+}
+.card p {
+  font-size: 1em;
+  margin: 0;
+  padding: 0em 1em 2em 1em;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
 }
