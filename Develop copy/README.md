@@ -1,33 +1,53 @@
-# React + TypeScript + Vite
+# GitHub Candidate Search 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description 
+This React web application allowes users to browse through potential developer candidate profiles and either save or skip them. After saving candidates, their data will be organized into a table on the "Saved Candidates" tab. All of the data is retrieved through the GitHub API system using personal access tokens. 
 
-Currently, two official plugins are available:
+## Installations 
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repo:
 
-## Expanding the ESLint configuration
-
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-* Configure the top-level `parserOptions` property as follows:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+``` 
+git clone https://github.com/your-username/github-candidate-search.git cd github-candidate-search 
 ```
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+2. Instal dependencies:
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+``` 
+npm install
+```
+
+3. Add you own .env file with your own personal access token
+```
+env
+VITE_GITHUB_TOKEN=your_github_token_here
+```
+
+4. Build the application
+```
+npm run build
+  ```
+
+5. Start the server
+ ```
+ npm run dev
+ ```
+
+## Features
+
+- 🔎 Browse random GitHub users as "candidates"
+- 🧠 View candidate details: Name, Location, Email, Company, and Bio
+- 💾 Save promising candidates to your list
+- ❌ Reject saved candidates from your list
+- 🧭 Easy navigation between candidate search and saved profiles
+- 🎨 Clean and responsive UI with styled buttons and a formatted table
+
+## Deployment
+
+This app is deployable on Netlify with the following link:
+
+## Contributors
+Kirstin Lisnoff
+
+## License 
+This project is open source and available under the MIT License.
